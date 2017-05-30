@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather App</title>
+  <link rel="stylesheet" type="text/css" href="resources/styles.css">
+</head>
+<body>
+  <section>
+    <h1 id="city">Fetching Weather...</h1>
+    
+  <div id="out"></div>
+    <div id="city"></div>
+    
+    <div id="temperature" class="hidden">
+      <h1 id="temp"></h1>
+      <span id="units">
+      <button id="convert-celsius" class="unit-active">°C</button>
+      <button id="convert-fahrenheit">°F</button>
+      </span>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>Powered by <a href="http://openweathermap.org">openweathermap.org</a>.</p>
+  </footer>
+  <script type="text/javascript" src="vendors/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="resources/scripts.js"></script>
+</body> 
