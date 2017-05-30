@@ -38,6 +38,25 @@ function geoFindMe() {
     }); 
     
       
+    var currentWeather = result.weather[0].id;
+    //show icons depending on weather conditions:
+   if (currentWeather === 800 || (currentWeather > 950 && currentWeather < 956)) {
+       $(".sunny").removeClass("hidden");
+    }  else if(currentWeather > 800){   
+       $(".cloudy").removeClass("hidden");
+    }  else if (currentWeather >= 600 && currentWeather < 700){
+      $(".flurries").removeClass("hidden");
+    } else if (currentWeather >= 500){
+      $(".rainy").removeClass("hidden");
+    } else if (currentWeather >= 300){
+      $(".sun-shower").removeClass("hidden");
+    } else if (currentWeather >= 200){
+      $("thunder-storm").removeClass("hidden");
+    } else {
+      $(".sunny").removeClass("hidden");
+    }
+    }});
+  }
 
   function success(position) {
     var latitude  = position.coords.latitude;
